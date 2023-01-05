@@ -1,9 +1,28 @@
 
 .three.columns img{
     width:100%;
+    border-radius: 50%;
    }
 
 a i {
     color: #222;
 }
 
+body {
+	background: linear-gradient(-45deg, #f0bfb1, #fdc4da, #bde6f5, #b1f3e4);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
