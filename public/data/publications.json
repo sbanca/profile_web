@@ -1,0 +1,242 @@
+{
+    "publications": {
+        "publication1": {
+            "title": "Speech-Augmented Cone-of-Vision for Exploratory Data Analysis",
+            "authors": [
+                "Riccardo Bovo",
+                "Daniele Giunchi",
+                "Ludwig Sidenmark",
+                "Joshua Newn",
+                "Hans Gellersen",
+                "Enrico Costanza",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "acm": "https://dl.acm.org/doi/abs/10.1145/3544548.3581283",
+                "youtube": "https://www.youtube.com/watch?v=6meJveJe_mY",
+                "github": "https://github.com/Collaborative-Immersive-Visual-Toolkit/UnityOculusAndroidVRBrowser"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication2": {
+            "title": "Cone of Vision as a Behavioural Cue for VR Collaboration",
+            "authors": [
+                "Riccardo Bovo",
+                "Daniele Giunchi",
+                "Muna Alebri",
+                "Anthony Steed",
+                "Enrico Costanza",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "acm": "https://dl.acm.org/doi/abs/10.1145/3555615",
+                "youtube": "https://www.youtube.com/watch?v=xbBbSSBMseg",
+                "github": "https://github.com/Collaborative-Immersive-Visual-Toolkit/UnityOculusAndroidVRBrowser"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication3": {
+            "title": "Real-time head-based deep-learning model for gaze probability regions in collaborative VR",
+            "authors": [
+                "Riccardo Bovo",
+                "Daniele Giunchi",
+                "Ludwig Sidenmark",
+                "Hans Gellersen",
+                "Enrico Costanza",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "acm": "https://dl.acm.org/doi/abs/10.1145/3517031.3529642",
+                "youtube": "https://youtu.be/RPv-FU2GqN0",
+                "github": "https://github.com/Collaborative-Immersive-Visual-Toolkit/VR_Iso_Gaze_Contours"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication4": {
+            "title": "Detecting errors in pick and place procedures: detecting errors in multi-stage and sequence-constrained manual retrieve-assembly procedures",
+            "authors": [
+                "Riccardo Bovo",
+                "Nicola Binetti",
+                "Duncan P Brumby",
+                "Simon Julier"
+            ],
+            "links": {
+                "acm": "https://dl.acm.org/doi/abs/10.1145/3377325.3377497"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication5": {
+            "title": "MR-RIEW: An MR Toolkit for Designing Remote Immersive Experiment Workflows",
+            "authors": [
+                "Riccardo Bovo",
+                "Daniele Giunchi",
+                "Anthony Steed",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "ieee": "https://ieeexplore.ieee.org/document/9757432",
+                "github": "https://github.com/CrowdVRLab/MR-RIEW"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication6": {
+            "title": "Mitigation strategies for participant non-attendance in VR remote collaborative experiments",
+            "authors": [
+                "Riccardo Bovo",
+                "Daniele Giunchi",
+                "Enrico Costanza",
+                "Anthony Steed",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "frontiers": "https://www.frontiersin.org/articles/10.3389/fcomp.2022.928269/full"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication7": {
+            "title": "Shall I describe it or shall I move closer? Verbal references and locomotion in VR collaborative search tasks",
+            "authors": [
+                "Riccardo Bovo",
+                "Daniele Giunchi",
+                "Enrico Costanza",
+                "Anthony Steed",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "eusset": "https://dl.eusset.eu/handle/20.500.12015/4376"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication8": {
+            "title": "Perceived realism of pedestrian crowds trajectories in vr",
+            "authors": [
+                "Daniele Giunchi",
+                "Riccardo Bovo",
+                "Panayiotis Charalambous",
+                "Fotis Liarokapis",
+                "Alastair Shipman",
+                "Stuart James",
+                "Anthony Steed",
+                "Thomas Heinis"
+            ],
+            "links": {
+                "acm": "https://dl.acm.org/doi/abs/10.1145/3489849.3489860",
+                "github": "https://github.com/CrowdVRLab/track_pedestrian"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication9": {
+            "title": "Explorative Study on Asymmetric Sketch Interactions for Object Retrieval in Virtual Reality",
+            "authors": [
+                "Daniele Giunchi",
+                "Stuart James",
+                "Riccardo Bovo",
+                "Donald Degraen",
+                "Anthony Steed"
+            ],
+            "links": {
+                "ieee": "https://ieeexplore.ieee.org/abstract/document/9929445"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication10": {
+            "title": "A taxonomy for combining activity recognition and process discovery in industrial environments",
+            "authors": [
+                "Felix Mannhardt",
+                "Riccardo Bovo",
+                "Manuel Fradinho Oliveira",
+                "Simon Julier"
+            ],
+            "links": {
+                "springer": "https://link.springer.com/chapter/10.1007/978-3-030-03496-2_10"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication11": {
+            "title": "EmBARDiment: an Embodied AI Agent for Productivity in XR",
+            "authors": [
+                "Riccardo Bovo",
+                "S Abreu",
+                "K Ahuja",
+                "E J Gonzalez",
+                "L T Cheng",
+                "M Gonzalez-Franco"
+            ],
+            "links": {
+                "arxiv": "https://arxiv.org/abs/2408.08158"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication12": {
+            "title": "Visualisations with Semantic Icons: Assessing Engagement with Distracting Elements",
+            "authors": [
+                "Muna Alebri",
+                "Enrico Costanza",
+                "Georgia Panagiotidou",
+                "Duncan P Brumby",
+                "Farah Althani",
+                "Riccardo Bovo"
+            ],
+            "links": {
+                "doi": "https://www.sciencedirect.com/science/article/pii/S1071581924001265"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication13": {
+            "title": "WindowMirror: An Open-Source Toolkit to Bring Interactive Multi-Window Views into XR",
+            "authors": [
+                "Riccardo Bovo",
+                "E J Gonzalez",
+                "L T Cheng",
+                "M Gonzalez-Franco"
+            ],
+            "links": {
+                "ieee": "https://ieeexplore.ieee.org/abstract/document/10536416",
+                "github": "https://github.com/google/window-mirror"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        },
+        "publication14": {
+            "title": "Streamspace: A Framework for Window Streaming in Collaborative Mixed Reality Environments",
+            "authors": [
+                "Daniele Giunchi",
+                "Riccardo Bovo",
+                "N Numan",
+                "Anthony Steed"
+            ],
+            "links": {
+                "ieee": "https://ieeexplore.ieee.org/document/10536446",
+                "github": "https://github.com/UCL-VR/streamspace"
+            },
+            "imageUrl": "",
+            "abstract": "",
+            "publicationDate": ""
+        }
+    }
+}
