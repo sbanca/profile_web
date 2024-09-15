@@ -1,28 +1,9 @@
 // main.js
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
-import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyD9GQOtuqi7EB_mud57UjxYylLxrrlMiXk",
-  authDomain: "web-profile-rb.firebaseapp.com",
-  databaseURL: "https://web-profile-rb-default-rtdb.firebaseio.com",
-  projectId: "web-profile-rb",
-  storageBucket: "web-profile-rb.appspot.com",
-  messagingSenderId: "1083266735534",
-  appId: "1:1083266735534:web:3b993e9be258b2b0367c3f",
-  measurementId: "G-NC4XWE04J6"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-// Initialize Realtime Database and get a reference to the service
-const database = getDatabase(app);
+// Import the shared database reference from firebase.js
+import { database } from './firebase.js';
+import { ref, get } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+import { generateLinks } from './utils.js';
 
 // Reference to the 'publications' node
 const publicationsRef = ref(database, 'publications');
@@ -41,7 +22,6 @@ get(publicationsRef)
     console.error('Error fetching publications:', error);
   });
 
-// Rest of your code remains the same
 function displayPublications(publications) {
   const publicationsContainer = document.getElementById('publications-container');
   publicationsContainer.innerHTML = '';
@@ -49,62 +29,49 @@ function displayPublications(publications) {
   const publicationArray = Object.values(publications);
   shuffleArray(publicationArray);
 
-  publicationArray.forEach((pub) => {
-    const publicationHTML = generatePublicationHTML(pub);
+  Object.entries(publications).forEach(([pubId, pub]) => {
+    const publicationHTML = generatePublicationHTML(pub, pubId);
     publicationsContainer.insertAdjacentHTML('beforeend', publicationHTML);
   });
+
+  // Make entire card clickable by adding an event listener
+  document.querySelectorAll('.publication-card').forEach(card => {
+    card.addEventListener('click', function () {
+      const pubId = this.getAttribute('data-id');
+      window.location.href = `publication.html?id=${pubId}`;
+    });
+  });
 }
+
 
 function shuffleArray(array) {
   array.sort(() => Math.random() - 0.5);
 }
 
-function generatePublicationHTML(pub) {
+// Function to generate the publication card markup
+function generatePublicationHTML(pub, pubId) {
   const authors = pub.authors.join(', ');
+  const tagsHTML = pub.tags ? pub.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+  const linksHTML = generateLinks(pub.links);
+
+  const backgroundStyle = pub.thumbnailUrl ? `style="background-image: url(${pub.thumbnailUrl})"` : `style="background-image: url('images/150.png')"`; 
 
   return `
-    <h6 style="margin-bottom: 0px">
-      <strong>${pub.title}</strong>
-      ${generateLinks(pub.links)}
-    </h6>
-    <p><em>${authors}</em></p>
+    <div class="row publication-card" data-id="${pubId}">
+      <div class="three columns card-thumbnail" ${backgroundStyle}></div>
+      <div class="nine columns card-content">
+        <p class="publication-venue">${pub.venue || ''}</p>
+        <h5 class="publication-title">${pub.title}</h5>
+        <p class="publication-authors">${authors}</p>
+        <div class="publication-tags">${tagsHTML}</div>
+        <div class="card-footer">
+          <div class="publication-links">${linksHTML}</div>
+        </div>
+      </div>
+    </div>
   `;
 }
 
-function generateLinks(links) {
-    let linksHTML = '';
-    
-    if (links.acm) {
-      linksHTML += ` <a href="${links.acm}"><img style="bottom: -5px; position: relative;color: #222" src="/images/DL_icon.svg" alt="ACM Digital Library"></a>`;
-    }
-    if (links.github) {
-      linksHTML += ` <a href="${links.github}"><i class="fa-brands fa-square-github fa-xl" aria-hidden="true"></i></a>`;
-    }
-    if (links.arxiv) {
-      linksHTML += ` <a href="${links.arxiv}"><img style="bottom: -5px; position: relative;width: 50px; color: #222" src="/images/arxiv.png" alt="arXiv"></a>`;
-    }
-    if (links.eusset) {
-      linksHTML += ` <a href="${links.eusset}"><img style="bottom: -5px; position: relative;width: 20px; color: #222" src="/images/eus.png" alt="EUSSET"></a>`;
-    }
-    if (links.youtube) {
-      linksHTML += ` <a href="${links.youtube}"><i class="fa-brands fa-youtube fa-xl" aria-hidden="true"></i></a>`;
-    }
-    if (links.springer) {
-      linksHTML += ` <a href="${links.springer}"><img style="bottom: -2px; position: relative;width: 70px; color: #222" src="/images/springer.png" alt="Springer"></a>`;
-    }
-    if (links.ieee) {
-      linksHTML += ` <a href="${links.ieee}"><img style="bottom: -2px; position: relative;width: 50px; color: #222" src="/images/ieee-1.svg" alt="IEEE"></a>`;
-    }
-    if (links.frontiers) {
-      linksHTML += ` <a href="${links.frontiers}"><img style="bottom: -5px; position: relative;width: 90px; color: #222" src="/images/frontiers.svg" alt="Frontiers"></a>`;
-    }
-    if (links.doi) {
-      linksHTML += ` <a href="${links.doi}">DOI</a>`;
-    }
-    if (links.pdf) {
-      linksHTML += ` <a href="${links.pdf}"><i class="fa-solid fa-file-pdf fa-xl" aria-hidden="true"></i></a>`;
-    }
-    
-    return linksHTML;
-  }
-  
+
+
+// main.js

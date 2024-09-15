@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>Publication Details - Riccardo Bovo</title>
+    <meta name="description" content="Publication details page">
+    <meta name="author" content="Riccardo Bovo">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/extra.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/flask.svg">
+
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/8c959af350.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Primary Page Layout -->
+    <div class="container">
+
+        <!-- Link Back to Publications -->
+        <div class="row">
+            <div class="column" style="margin-top: 2.5%">
+                <a href="index.html">Back to publications</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="twelve columns" style="margin-top: 2.5%">
+                <!-- Publication Venue -->
+                <p id="publication-venue" style="font-style: italic; color: #555;">Loading venue...</p>
+
+                <!-- Publication Title -->
+                <h3 id="publication-title">Loading...</h3>
+
+                <!-- Publication Authors -->
+                <p id="publication-authors" style="font-weight: bold;">Loading authors...</p>
+
+                <!-- Links to resources (YouTube, GitHub, etc.) -->
+                <div id="publication-links"></div>
+            </div>
+        </div>
+
+        <!-- Image for the Publication -->
+        <div class="row">
+            <div class="twelve columns">
+                <img id="publication-image" style="width: 100%; height: auto;" alt="Publication Image">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column" style="margin-top: 2.5%">
+                <!-- Publication Abstract -->
+                <p id="publication-abstract">Loading abstract...</p>
+            </div>
+        </div>
+
+        <!-- YouTube Video Container (if available) -->
+        <div class="row">
+            <div class="column" style="margin-top: 2.5%">
+                <div id="youtube-container"></div>
+            </div>
+        </div>
+
+        <!-- Link Back to Publications -->
+        <div class="row">
+            <div class="column" style="margin-top: 2.5%">
+                <a href="index.html">Back to publications</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- footer.ejs -->
+    <footer style="text-align: center; margin-top: 40px; padding: 20px;">
+        <p>&copy; 2024 Riccardo Bovo. All rights reserved.</p>
+    </footer>
+
+    <!-- Include publication.js as a module -->
+    <script type="module" src="js/publication.js"></script>
+
+</body>
+
+</html>
