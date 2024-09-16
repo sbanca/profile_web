@@ -100,6 +100,15 @@ body {
 	font-size: 1.2em;
 }
 
+.publication-links img {
+	width: 24px; /* Set a fixed width */
+	height: auto; /* Maintain aspect ratio */
+	display: inline-block; /* Ensure it stays inline with other icons */
+	vertical-align: middle; /* Align it vertically with the text or other icons */
+	max-width: 100%; /* Ensure it doesn't grow beyond its container */
+  }
+  
+
 .publication-links a:hover {
 	color: #007BFF;
 }
