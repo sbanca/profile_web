@@ -1,1 +1,6 @@
 .DS_Store
+
+# Ignore Node.js local installations and modules
+node_modules/
+node/
+npm-debug.log
