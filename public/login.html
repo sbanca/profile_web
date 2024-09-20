@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/extra.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/flask.svg">
+
+    <!-- FontAwesome CSS -->
+    <script src="https://kit.fontawesome.com/8c959af350.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Basic styling for better appearance */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required /><br />
+        <input type="password" id="password" placeholder="Password" required /><br />
+        <button style="margin-top: 5px;" type="submit">Login</button>
+        <p class="error" id="error-message"></p>
+    </form>
+
+    <!-- Include Firebase Initialization -->
+    <script type="module" src="js/firebase.js"></script>
+
+    <!-- Include login.js as a module -->
+    <script type="module" src="js/login.js"></script>
+
+    </script>
+</body>
+
+</html>

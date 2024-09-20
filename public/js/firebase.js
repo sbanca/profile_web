@@ -3,6 +3,7 @@
 // Import the necessary Firebase SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -19,6 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+const auth = getAuth(app);
 
 // Export the initialized database for use in other modules
-export { database };
+export { database , auth };
