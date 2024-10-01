@@ -18,9 +18,11 @@ body {
 	0% {
 		background-position: 0% 50%;
 	}
+
 	50% {
 		background-position: 100% 50%;
 	}
+
 	100% {
 		background-position: 0% 50%;
 	}
@@ -29,7 +31,8 @@ body {
 /* Publication Card Styles */
 .publication-card {
 	display: flex;
-	align-items: stretch; /* Ensure both columns (thumbnail and content) are the same height */
+	align-items: stretch;
+	/* Ensure both columns (thumbnail and content) are the same height */
 	border-radius: 4px;
 	margin-bottom: 24px;
 	background-color: #ffffff2f;
@@ -39,18 +42,26 @@ body {
 }
 
 .publication-card:hover {
-	background-color: #ffffff6c; /* Change the background color on hover */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add hover effect */
+	background-color: #ffffff6c;
+	/* Change the background color on hover */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	/* Add hover effect */
 }
 
 /* Thumbnail for publication */
 .card-thumbnail {
-	width: 100%; /* Ensure the image fills the width */
-	background-size: cover; /* Ensure the image covers the container fully */
-	background-position: center; /* Center the image */
-	background-repeat: no-repeat; /* Prevent background tiling */
-	min-height: 150px; /* Ensure there's a minimum height */
-	flex-shrink: 0; /* Prevent the thumbnail from shrinking */
+	width: 100%;
+	/* Ensure the image fills the width */
+	background-size: cover;
+	/* Ensure the image covers the container fully */
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	/* Prevent background tiling */
+	min-height: 150px;
+	/* Ensure there's a minimum height */
+	flex-shrink: 0;
+	/* Prevent the thumbnail from shrinking */
 }
 
 /* Content section of the card */
@@ -101,16 +112,21 @@ body {
 }
 
 .publication-links img {
-	width: 24px; /* Set a fixed width */
-	height: auto; /* Maintain aspect ratio */
-	display: inline-block; /* Ensure it stays inline with other icons */
-	vertical-align: middle; /* Align it vertically with the text or other icons */
-	max-width: 100%; /* Ensure it doesn't grow beyond its container */
-  }
-  
+	width: 24px;
+	/* Set a fixed width */
+	height: auto;
+	/* Maintain aspect ratio */
+	display: inline-block;
+	/* Ensure it stays inline with other icons */
+	vertical-align: middle;
+	/* Align it vertically with the text or other icons */
+	max-width: 100%;
+	/* Ensure it doesn't grow beyond its container */
+}
+
 
 .publication-links a:hover {
-	color: #007BFF;
+	color: #000000;
 }
 
 /* Remove underline from links */
@@ -125,7 +141,8 @@ body {
 .youtube-video {
 	width: 100%;
 	height: 0;
-	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+	padding-bottom: 56.25%;
+	/* 16:9 Aspect Ratio */
 	position: relative;
 }
 
@@ -141,16 +158,20 @@ body {
 /* General responsive layout for smaller screens */
 @media only screen and (max-width: 768px) {
 	.publication-card {
-		flex-direction: column; /* Stack the image and content vertically */
+		flex-direction: column;
+		/* Stack the image and content vertically */
 	}
 
 	.card-thumbnail {
-		width: 100%; /* Make the image take full width */
-		min-height: 200px; /* Optional: Make the image taller on mobile for better visibility */
+		width: 100%;
+		/* Make the image take full width */
+		min-height: 200px;
+		/* Optional: Make the image taller on mobile for better visibility */
 	}
 
 	.card-content {
-		width: 100%; /* Make sure the text takes full width on mobile */
+		width: 100%;
+		/* Make sure the text takes full width on mobile */
 	}
 
 	.row {
@@ -160,7 +181,8 @@ body {
 
 	img {
 		width: 100%;
-		height: auto; /* Ensure the image scales proportionally */
+		height: auto;
+		/* Ensure the image scales proportionally */
 	}
 }
 
@@ -168,69 +190,83 @@ body {
 
 /* Timeline Styles */
 .timeline {
-    position: relative;
-    margin-left: 40px;
-    padding: 20px 0;
+	position: relative;
+	margin-left: 40px;
+	padding: 20px 0;
 }
 
 /* Vertical Line */
 .timeline-line {
-    position: absolute;
-    left: 20px;
-    width: 4px;
-    background: #33C3F0;
-    z-index: 0;
-    /* 'top' and 'height' will be set dynamically */
+	position: absolute;
+	left: 2.5px;
+	width: 2px;
+	background: #000000;
+	z-index: 0;
+	/* 'top' and 'height' will be set dynamically */
 }
 
 /* Timeline Item */
 .timeline-item {
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 0;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
 }
 
 /* Timeline Icon */
 .timeline-icon {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #33C3F0;
-    border: 4px solid #fff;
-    margin-right: 20px;
+	flex-shrink: 0;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #000000;
+	border: 0px solid #ffffff00;
+	margin-right: 20px;
+	margin-top: 20px;
 }
 
-/* Timeline Content */
+/* Timeline Content 
 .timeline-content {
     padding: 10px 20px;
-    background: #f9f9f9;
+    background: #ffffff2f;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .timeline-content h5 {
-    margin: 0;
-    color: #333;
+	margin: 0;
+	color: #333;
 }
 
 .timeline-content p {
-    margin: 5px 0;
-    color: #777;
+	margin: 5px 0;
+	color: #777;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
-    .timeline {
-        margin-left: 20px;
-    }
-    .timeline-line {
-        left: 10px;
-    }
-    .timeline-item {
-        margin-left: 20px;
-    }
-    .timeline-icon {
-        margin-right: 10px;
-    }
+	.timeline {
+		margin-left: 20px;
+	}
+
+	.timeline-line {
+		left: 10px;
+	}
+
+	.timeline-item {
+		margin-left: 20px;
+	}
+
+	.timeline-icon {
+		margin-right: 10px;
+	}
+}
+
+.timeline-content h6 {
+	margin-bottom: 0;
+}
+
+.cv-section {
+    margin-top: 20px;
+    border-top: 1.5px solid #000000;
+    padding-top: 20px;
 }
